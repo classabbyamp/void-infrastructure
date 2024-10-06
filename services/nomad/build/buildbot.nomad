@@ -120,6 +120,8 @@ EOF
       template {
         data = file("buildbot.cfg")
         destination = "local/buildbot.cfg"
+        change_mode = "signal"
+        change_signal = "SIGHUP"
       }
 
       template {
